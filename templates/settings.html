@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Add Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Add settings CSS  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='settings.css') }}">
+
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="bg-forest-green text-light py-3">
+      <div class="container">
+        <h1>Skysite<a href="hP"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif" style="width:42px;height:42px;"></a></h1>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-nav">
+        <div class="container">
+
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hP">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/community">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/settings">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/logout">Logout</a>
+                    </li>
+               
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="settings">
+        <h2>Settings</h2>
+<img src="static/download.jpg" style="width:242px;height:242px;">
+
+        <div class="account-settings">
+            <h3>Change Username</h3>
+            <form action="/change_username" method="post">
+                <h6>Current Username: {{account.username}}</h6>
+                <input type="text" name="username" placeholder="Enter New Username">
+                <button type="submit">Save Username</button>
+            </form>
+        </div>
+
+        <div class="account-settings">
+            <h3>Change First Name</h3>
+            <form action="/change_first_name" method="post">
+                <h6>Current Name: {{account.first_name}}</h6>
+                <input type="text" name="name" placeholder="Enter New Name">
+                <button type="submit">Save First Name</button>
+            </form>
+        </div>
+
+        <div class="account-settings">
+            <h3>Change Password</h3>
+            <form action="/change_password" method="post">
+                <h6>{{msg}}</h6>
+                <input type="text" name="old" placeholder="Enter Old Password">
+                <input type="text" name="password" placeholder="Enter New Password">
+                <input type="text" name="Confirm" placeholder="Confirm New Password">
+                <button type="submit">Save Password</button>
+            </form>
+        </div>
+
+        <div class="account-settings">
+            <h3>Change Email</h3>
+            <form action="/change_email" method="post">
+                <h6>Current Email: {{account.email}}</h6>
+                <input type="email" name="email" placeholder="Enter New Email">
+                <button type="submit">Save Email</button>
+            </form>
+        </div>
+
+        <div class="account-settings">
+            <h3>Change Home City</h3>
+            <form action="/change_home_city" method="post">
+                <h6>Current City: {{account.city}}</h6>
+                <input type="text" name="city" placeholder="Enter New Home City">
+                <button type="submit">Save Home City</button>
+            </form>
+        </div>
+    </section>
+</html>

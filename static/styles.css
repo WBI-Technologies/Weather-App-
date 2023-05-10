@@ -1,0 +1,346 @@
+/* styles.css */
+
+/* General styles */
+
+.bg-forest-green {
+    background-color: #000863;
+}
+
+.bg-light-blue {
+    background-color: #ffffff;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+html, body {
+font-family: Arial, sans-serif;
+color: #333;
+background-color: #f5f5f5;
+line-height: 1.6;
+}
+.navbar {
+  height: 50px;
+  line-height: 50px;
+}
+
+.navbar .navbar-nav .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Header */
+header {
+background-color: #0d6efd;
+padding: 1rem;
+text-align: left;
+}
+
+header h1 {
+color: #fff;
+margin-top: 0;
+}
+.ul{
+    white-space:nowrap;
+    display: inline-block;
+
+}
+/* Navigation */
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+.navbar-nav {
+  white-space: nowrap;
+}
+.custom-nav .navbar-collapse {
+    display: flex !important;
+    white-space:nowrap
+}
+
+.custom-nav .navbar-nav .nav-link {
+    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+    transition: font-size 0.2s ease-in-out;
+}
+nav {
+margin-bottom: 1rem;
+z-index: 1000; /* Add this line to give the nav element a high stack order */
+    position: relative; /* Add this line to make sure the z-index property takes effect */
+      white-space: nowrap;
+
+}
+
+.nav-item a {
+text-decoration: none;
+color: #fff;
+transition: color 0.3s;
+  white-space: nowrap;
+
+}
+
+.nav-item a:hover {
+color: #0a58ca;
+  white-space: nowrap;
+
+}
+
+/* Main content */
+.container {
+padding: 2rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+h2, h4 {
+margin-top: 0;
+margin-bottom: 1rem;
+}
+
+/* Weather data */
+.weather-data {
+background-color: #fff;
+border-radius: 5px;
+padding: 1rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-bottom: 2rem;
+animation: fadeIn 0.5s;
+}
+
+.weather-data h4, .weather-data p {
+margin: 0;
+margin-bottom: 0.5rem;
+}
+
+/* Hourly forecast */
+.hourly-forecast {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-bottom: 2rem;
+}
+
+.hourly-forecast .weather-data {
+width: 20%;
+min-width: 200px;
+}
+
+/* Daily forecast */
+.daily-forecast {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.daily-forecast .weather-data {
+width: 30%;
+min-width: 300px;
+}
+
+/* Create form */
+.create {
+    display: flex;
+    align-items: center;
+}
+
+.create textarea {
+    display: inline-block;
+}
+
+.create button {
+    display: inline-block;
+}
+
+/* Post */
+.post-header, .post-content {
+    background-color: rgb(999, 999, 999);
+    width: 98%;
+}
+
+.post-header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-content {
+    margin: auto;
+    min-height: 200px;
+}
+
+.post-footer {
+    background-color: rgb(182, 182, 217);
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.register-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.register-form input,
+.register-form select {
+    width: 100%;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.register-form button[type="submit"] {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.register-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.register-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}
+
+.custom-nav .navbar-nav .nav-link {
+    font-size: 18px;
+}
+/* Fullscreen overlay styles */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-overlay .nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-overlay .nav-items .nav-link {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 10px;
+  text-align: center;
+}
+
+.fullscreen-overlay.show {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+    .nav-item a {
+        font-size: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-item a {
+        font-size: 14px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-item a {
+        font-size: 12px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+/* Fullscreen overlay styles */
+@media (max-width: 991px) {
+  .fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fullscreen-overlay .nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fullscreen-overlay .nav-items .nav-link {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .fullscreen-overlay.show {
+    display: flex;
+  }
+}
+.nav-item {
+  margin-right: 1px;
+}
+
+@media (max-width: 2px) {
+  .nav-item {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: flex!important;
+  }
+  .navbar-nav {
+    flex-direction: row!important;
+    margin-top: -40px; /* Adjust this value to move the items up or down */
+  }
+}

@@ -1,0 +1,41 @@
+/* settings.css */
+
+.settings {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-settings {
+    margin-bottom: 20px;
+}
+
+.account-settings h3 {
+    margin-bottom: 10px;
+}
+
+.account-settings form {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-settings input[type="text"],
+.account-settings input[type="email"] {
+    margin-bottom: 10px;
+}
+
+.account-settings button[type="submit"] {
+    align-self: flex-start;
+}
+.button{
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}

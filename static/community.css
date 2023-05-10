@@ -1,0 +1,168 @@
+
+/* community.css */
+
+/* General styles */
+html, body {
+font-family: Arial, sans-serif;
+color: #000;
+background-color: #f8f9fa;
+line-height: 1.6;
+}
+
+/* Banner */
+.banner {
+background-color: ##003366;
+padding: 1rem;
+text-align: center;
+}
+
+
+
+/* Main content */
+main {
+padding: 2rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Create post form */
+.create {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.create .current_user {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+
+
+textarea#post {
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+}
+
+.weather-data {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create textarea {
+resize: none;
+width: 100%;
+padding: .5rem;
+border-radius: 10px;
+border: 1px solid #ccc;
+margin-bottom: 1rem;
+}
+.h6{
+    text-align: left
+}
+.create button {
+background-color: #0d6efd;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: .5rem;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.create button:hover {
+background-color: #0a58ca;
+}
+
+/* Post */
+.post {
+background-color: #fff;
+border-radius: 5px;
+padding: 1rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-bottom: 2rem;
+animation: fadeIn 0.5s;
+}
+.navbar-nav {
+  white-space: nowrap;
+}
+.post-header, .post-content, .post-footer {
+background-color: #FFFFFF;
+border-radius: 5px;
+padding: 2rem;
+margin-bottom: 1rem;
+}
+
+.post-header h4, .post-header h6 {
+display: inline-block;
+margin-right: 1rem;
+}
+
+.post-content p {
+margin: 0;
+}
+
+.post-footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 0;
+}
+
+.post-actions a {
+text-decoration: none;
+color: #333;
+transition: color 0.3s;
+}
+
+.post-actions a:hover {
+color: #0d6efd;
+}
+
+.post-likes p {
+margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@media (max-width: 1200px) {
+    .nav-item a {
+        font-size: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-item a {
+        font-size: 14px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-item a {
+        font-size: 12px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}

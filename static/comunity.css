@@ -1,0 +1,47 @@
+.post-header, .create, .post-footer .post-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    width: 98%;
+    margin: auto;
+    background-color: rgb(182, 182, 217);
+    margin-top: 1px; 
+    margin-bottom: 1px;
+
+  }
+  .post{
+    align-items: center;
+    padding: 10px;
+    width: 90%;
+    background-color: blue;
+    margin: auto;
+    margin-top: 10px; 
+    margin-bottom: 5px;
+  }
+  
+  .post-header h4, .post-header h6 {
+    margin: 0;
+  }
+  textarea{
+    width: 90%;
+    
+  }
+  #cS {
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    width: 98%;
+    margin: auto;
+    background-color: rgb(182, 182, 217);
+    margin-top: 5px; 
+    margin-bottom: 1px;
+  }
+  #commentBox {
+    align-items: center;
+    padding-left: auto;
+    padding-right: auto;
+    width: 100%;
+  }
