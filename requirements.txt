@@ -1,0 +1,7 @@
+Flask==2.0.1
+requests==2.26.0
+json5==0.9.5
+mysqlclient==2.0.3
+random2==1.0.1
+Flask-MySQLdb==0.2.0
+flask-bcrypt==0.7.1
